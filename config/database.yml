@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: softcat_development
+  pool: 5
+  username: angelko
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: softcat_test
+  pool: 5
+  username: angelko
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: softcat_production
+  pool: 5
+  username: angelko
+  password:

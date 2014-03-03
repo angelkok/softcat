@@ -4,12 +4,13 @@ gem 'rails', '3.2.17'
 
 gem 'pg'
 
+gem 'faker'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara', '~> 2.2.0'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers'
-  gem 'faker'
 end
 
 group :assets do

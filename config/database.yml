@@ -3,7 +3,6 @@ development:
   encoding: unicode
   database: softcat_development
   pool: 5
-  username: angelko
   password:
 
 test:
@@ -11,7 +10,6 @@ test:
   encoding: unicode
   database: softcat_test
   pool: 5
-  username: angelko
   password:
 
 production:
@@ -19,5 +17,4 @@ production:
   encoding: unicode
   database: softcat_production
   pool: 5
-  username: angelko
   password:

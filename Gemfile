@@ -22,4 +22,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'jquery-rails'
+
+ruby "1.9.3"

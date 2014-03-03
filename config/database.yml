@@ -15,6 +15,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: softcat_production
+  database: d62kmfral7g5pn
   pool: 5
   password:

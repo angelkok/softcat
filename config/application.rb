@@ -66,5 +66,7 @@ module Softcat
     config.assets.version = '1.0'
 
     config.i18n.enforce_available_locales = false
+
+    config.assets.initialize_on_precompile = false
   end
 end

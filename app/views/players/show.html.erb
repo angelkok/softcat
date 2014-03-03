@@ -1,0 +1,5 @@
+<h1><%=@player.name%></h1>
+<%=link_to 'Edit Player', edit_player_path(@player) %>
+<%=link_to 'Delete Player', @player, :method => :delete, :confirm => "Delete #{@player.name}?"%>
+<div>Team: <%= @player.team_name %></div>
+<div>Position: <%= @player.position_name %></div>

@@ -1,1 +1,7 @@
-hi
+<h1>Team List</h1>
+<%=link_to 'New Team', new_team_path%>
+<ul id="team_list">
+  <% @teams.each do |team| %>
+    <li><%=link_to team.name, team%><span id="team_<%=team.id%>_unique_positions">Positions: <%=team.positions.count%></span></li>
+  <% end %>
+</ul>

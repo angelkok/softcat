@@ -5,4 +5,10 @@ class Team < ActiveRecord::Base
   attr_accessible :name
 
   validates_presence_of :name
+
+  def remove_players_from_team
+    players.each do |player|
+      player.update_attributes(team: nil)
+    end
+  end
 end

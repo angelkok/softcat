@@ -11,6 +11,15 @@ positions = %w(Pitcher Catcher Shortstep)
 positions = %w(Left\ Outfilder Right\ Outfilder Center\ Outfilder) + positions
 positions = %w(First\ Baseman Second\ Baseman Third\ Baseman) + positions
 
-positions.each do |position|
-  Position.find_or_create_by_name(position)
+positions.each do |position_name|
+  Position.find_or_create_by_name(position_name)
 end
+
+%w(Timbers Seahawks Spring\ Chicks Easterly\ Locks).each do |team_name|
+  team = Team.find_or_create_by_name(team_name)
+
+  Position.all.each do |position|
+    Player.create(name: Faker::Name.name, team: team, position: position)
+  end
+end
+

@@ -1,0 +1,8 @@
+<h1><%=@team.name%></h1>
+<%=link_to 'Edit Team', edit_team_path(@team) %>
+<%=link_to 'Delete Team', @team, :method => :delete, :confirm => "Delete #{@team.name}?"%>
+<ul id="player_list">
+  <% @team.players.each do |player| %>
+    <li id="player_<%=player.id%>_item"><%=link_to player.name, player%> - <%=player.position.name%></li>
+  <% end %>
+</ul>

@@ -1,0 +1,7 @@
+<%= form_for @player, url: {action: @form_action } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.select :team, options_for_select(@team_options, :selected => @player.team_id) %>
+  <%= f.select :position, options_for_select(@position_options, :selected => @player.position_id) %>
+  <%= f.submit @form_action %>
+<% end %>

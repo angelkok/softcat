@@ -1,0 +1,5 @@
+<%= form_for @team, url: {action: @form_action } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit @form_action %>
+<% end %>

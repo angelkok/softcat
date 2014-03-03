@@ -9,10 +9,12 @@ class TeamsController < ApplicationController
 
   def new
     @team = Team.new
+    @form_action = 'create'
   end
 
   def edit
     @team = Team.find(params[:id])
+    @form_action = 'update'
   end
 
   def create
@@ -24,6 +26,13 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
     @team.update_attributes(params[:team])
     redirect_to team_path(@team)
+  end
+
+  def destroy
+    @team = Team.find(params[:id])
+    @team.remove_players_from_team
+    @team.delete
+    redirect_to action: 'index'
   end
 
 end

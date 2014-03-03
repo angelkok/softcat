@@ -50,7 +50,7 @@ Softcat::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   #
-  root :to => 'team#index'
+  root :to => 'teams#index'
 
   # See how all your routes lay out with "rake routes"
 

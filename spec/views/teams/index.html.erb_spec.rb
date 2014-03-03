@@ -28,4 +28,9 @@ describe "teams/index" do
     new_team_link = @body.find("a:contains('New Team')")
     expect(new_team_link[:href]).to eq(new_team_path)
   end
+
+  it "contains a link to players index" do
+    players_index_link = @body.find("a:contains('See All Players')")
+    expect(players_index_link[:href]).to eq(players_path)
+  end
 end

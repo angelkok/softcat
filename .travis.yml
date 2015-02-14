@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - "1.9.3"
 script:
-  - bundle exec rake db:create db:schema:load db:test:prepare spec
+  - bundle exec rake
 notifications:
   email: false
